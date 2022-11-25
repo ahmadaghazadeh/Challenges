@@ -25,6 +25,8 @@ public class CountConformingBitmasks {
                 counter++;
             }
         }
+        
+        counter+=30-number.length();
         return (int)Math.pow(2, counter);
     }
 

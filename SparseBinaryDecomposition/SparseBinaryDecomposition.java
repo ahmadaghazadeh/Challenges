@@ -2,20 +2,21 @@ package SparseBinaryDecomposition;
 
 public class SparseBinaryDecomposition {
     public static void main(String args[]) {
-        int count=solution(26);
+        int count=solution(74901729);
         System.out.println(count);
     }
 
     private static int solution(int N) {
-        int result=-1;
-        for (int i = N; i > 0; i--) {
+        if (N <= 2)
+           return N;
+        for (int i = (N/2); i > 0; i--) {
             if(isSpare(i)){
                 if(isSpare(N-i)){
                     return i;
                 }
             }
         }
-        return result;
+        return -1;
     }
 
     private static boolean isSpare(int number){

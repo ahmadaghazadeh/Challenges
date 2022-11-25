@@ -1,37 +1,21 @@
 package CountConformingBitmasks;
 
-
-public class Lesson2CyclicRotation {
+public class CountConformingBitmasks {
     public static void main(String args[]) {
-        int[] givenArray=new int[]{};
-        int[] result=solution(givenArray,3);
-        for (int i = 0; i < result.length; i++) {
-            System.out.print(" "+ result[i]);
-          
-        }
-        System.out.println();
+        int count=solution(1073741727,1073741631,1073741679);
+        System.out.println(count);
     }
 
-    private static int[] solution(int[] A,int k) {
-         for (int i = 1; i <= k; i++) {
-            A=rotationOneTime(A);
-         }
-         return A;
-    }
-    private static int[] rotationOneTime(int[] A){
-        if(A.length<1){
-            return A;
+    private static int solution(int A,int B,int C) {
+        int counter=0;
+        String binaryA=Integer.toBinaryString(A);
+        String binaryB=Integer.toBinaryString(B);
+        String binaryC=Integer.toBinaryString(C);
+        for (int i = 0; i < binaryA.length(); i++) {
+            if(binaryA.charAt(i)!=binaryB.charAt(i) || binaryA.charAt(i)!=binaryC.charAt(i) || binaryB.charAt(i)!=binaryC.charAt(i)){
+                counter++;
+            }
         }
-        int temp1=A[A.length-1];
-        int temp2=A[0];
-        for (int i = 0; i < A.length-1; i++) {
-             temp2=A[i];
-             A[i]=temp1;
-             temp1=temp2;
-        }
-        A[A.length-1]=temp2;       
-        return A;  
+       return (int)Math.pow(2, counter-1);
     }
-
-    
 }

@@ -14,9 +14,9 @@
 
 // N is an integer within the range [1..2,147,483,647].
 
-public class BinaryGap {
+public class Lesson1BinaryGap {
     public static void main(String args[]) {
-        System.out.println(solution(32));
+        System.out.println(solution(1041));
     }
 
     private static int solution(int N) {

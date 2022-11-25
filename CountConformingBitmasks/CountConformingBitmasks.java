@@ -7,21 +7,26 @@ public class CountConformingBitmasks {
     }
 
     private static int solution(int A,int B,int C) {
-        int counter=0;
+        int total=0;
         String binaryA=Integer.toBinaryString(A);
         String binaryB=Integer.toBinaryString(B);
         String binaryC=Integer.toBinaryString(C);
-        for (int i = 0; i < binaryA.length(); i++) {
-            if(binaryA.charAt(i)!=binaryB.charAt(i)){
-                counter++;
-            }
-            if( binaryA.charAt(i)!=binaryC.charAt(i)){
-                counter++;
-            }
-            if(binaryB.charAt(i)!=binaryC.charAt(i)){
+        total =conformingCount(binaryA)+conformingCount(binaryB)+conformingCount(binaryC);
+        total -=conformingCount(Integer.toBinaryString(A|B));
+        total -=conformingCount(Integer.toBinaryString(A|C));
+        total -=conformingCount(Integer.toBinaryString(B|C));
+        total +=conformingCount(Integer.toBinaryString(A|B|C));
+       return total;
+    }
+    private static int conformingCount(String number){
+        int counter=0;
+        for (int i = 0; i < number.length(); i++) {
+            if(number.charAt(i)=='0'){
                 counter++;
             }
         }
-       return counter;
+        return (int)Math.pow(2, counter);
     }
+
+     
 }

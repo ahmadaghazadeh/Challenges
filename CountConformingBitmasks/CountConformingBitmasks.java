@@ -12,10 +12,16 @@ public class CountConformingBitmasks {
         String binaryB=Integer.toBinaryString(B);
         String binaryC=Integer.toBinaryString(C);
         for (int i = 0; i < binaryA.length(); i++) {
-            if(binaryA.charAt(i)!=binaryB.charAt(i) || binaryA.charAt(i)!=binaryC.charAt(i) || binaryB.charAt(i)!=binaryC.charAt(i)){
+            if(binaryA.charAt(i)!=binaryB.charAt(i)){
+                counter++;
+            }
+            if( binaryA.charAt(i)!=binaryC.charAt(i)){
+                counter++;
+            }
+            if(binaryB.charAt(i)!=binaryC.charAt(i)){
                 counter++;
             }
         }
-       return (int)Math.pow(2, counter-1);
+       return counter;
     }
 }

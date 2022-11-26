@@ -26,7 +26,6 @@ public class CountriesCount{
         return countryNumber-1;
     }
     private static int checkCountry(int[][] A,int[][] countries,int i, int j,int countryNumber){
-        System.out.println(i+" , "+j + " A :" + A[i][j] +"  c : "+countryNumber ); 
         if(countries[i][j]!=0){
             return 0;
         }       

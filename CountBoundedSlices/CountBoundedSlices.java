@@ -6,18 +6,23 @@ public class CountBoundedSlices {
         System.out.println(solution(givenArray,2));
     }
 
-    private static int solution(int[] A,int K) {
+    private static int solution(int[] N,int K) {
         int count=0;
-        int endSlice=3;
-        for (int i = 0; i < A.length; i++) {
-            for (int j = i; j < i+endSlice; j++) {
-                if(j<A.length){
-                    if(Math.abs(A[j]-A[i])<=K){
-                        System.out.println("("+i+","+j+")");
-                        count++;
-                    }else{
-                        break;
-                    }
+        for (int i = 0; i < N.length; i++) {
+            int min=N[i];
+            int max=N[i];
+            for (int j = i; j < N.length; j++) {
+                if(min>=N[j]){
+                    min=N[j];
+                }
+                if(max<=N[j]){
+                    max=N[j];
+                }
+                if(max-min<=K){
+                    System.out.println("("+i+","+j+")");
+                    count++;
+                }else{
+                    break;
                 }
             }
         }

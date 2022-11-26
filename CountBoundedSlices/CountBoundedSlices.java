@@ -19,11 +19,14 @@ public class CountBoundedSlices {
                     max=N[j];
                 }
                 if(max-min<=K){
-                    System.out.println("("+i+","+j+")");
                     count++;
                 }else{
                     break;
                 }
+            }
+            if (count > 1000000000) {
+                count = 1000000000;
+                break;
             }
         }
         return count;

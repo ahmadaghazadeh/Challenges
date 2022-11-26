@@ -1,6 +1,6 @@
-package ArraryChallenge;
+package ArrListLen;
 
-public class Challenge1 {
+public class ArrListLen {
     
     public static void main(String args[]) {
         int[] givenArray=new int[]{1,4,-1,3,2};

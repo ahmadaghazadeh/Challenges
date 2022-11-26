@@ -24,19 +24,18 @@ public class TreeLongestZigZag {
     }
 
     private static int checkPath(Tree t, int turns,boolean left,boolean right){
-        System.out.println(t.x +"   "+turns);
         int maxTurns=turns;
         int turnsL=turns;
         int turnsR=turns;
         if(t.l!=null){
-            if(left){
+            if(!left){
                 turnsL++;
             }
             maxTurns=Math.max(checkPath(t.l, turnsL, true, false), maxTurns);
         }
 
         if(t.r!=null){
-            if(right){
+            if(!right){
                 turnsR++;
             }
             maxTurns=Math.max(checkPath(t.r, turnsR, false, true), maxTurns);

@@ -1,4 +1,4 @@
-package StrSymmetryPoint;
+package Codibility.StrSymmetryPoint;
 
 public class StrSymmetryPoint {
     public static void main(String args[]) {

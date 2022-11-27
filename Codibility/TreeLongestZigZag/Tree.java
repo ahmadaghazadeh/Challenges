@@ -1,4 +1,4 @@
-package TreeLongestZigZag;
+package Codibility.TreeLongestZigZag;
 public class Tree {
     public int x;
     public Tree l;

@@ -1,4 +1,4 @@
-package CountriesCount;
+package Codibility.CountriesCount;
 
 public class CountriesCount{
     public static void main(String args[]){  

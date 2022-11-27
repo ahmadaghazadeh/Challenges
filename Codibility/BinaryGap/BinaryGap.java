@@ -1,4 +1,4 @@
-package BinaryGap;
+package Codibility.BinaryGap;
 public class BinaryGap {
     public static void main(String args[]) {
         System.out.println(solution(1041));

@@ -1,4 +1,4 @@
-package SparseBinaryDecomposition;
+package Codibility.SparseBinaryDecomposition;
 
 public class SparseBinaryDecomposition {
     public static void main(String args[]) {

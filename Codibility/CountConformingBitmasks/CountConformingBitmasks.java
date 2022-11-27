@@ -1,4 +1,4 @@
-package CountConformingBitmasks;
+package Codibility.CountConformingBitmasks;
 
 public class CountConformingBitmasks {
     public static void main(String args[]) {

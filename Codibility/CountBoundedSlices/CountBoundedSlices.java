@@ -1,4 +1,4 @@
-package CountBoundedSlices;
+package Codibility.CountBoundedSlices;
 
 public class CountBoundedSlices {
     public static void main(String args[]) {

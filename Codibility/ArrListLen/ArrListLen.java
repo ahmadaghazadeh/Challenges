@@ -1,4 +1,4 @@
-package ArrListLen;
+package Codibility.ArrListLen;
 
 public class ArrListLen {
     

@@ -1,4 +1,4 @@
-package CyclicRotation;
+package Codibility.CyclicRotation;
 
 
 public class CyclicRotation {

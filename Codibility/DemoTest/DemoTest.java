@@ -1,4 +1,4 @@
-package DemoTest;
+package Codibility.DemoTest;
 
 import java.util.Arrays;
 

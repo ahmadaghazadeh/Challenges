@@ -5,7 +5,7 @@ import java.util.List;
 
 public class RemoveDuplicates {
     public static void main(String args[]) {
-        String givenString="abbaca";
+        String givenString="ABCBBCBA";
         String output=solution(givenString);
         System.out.println(output);
     }
@@ -30,7 +30,8 @@ public class RemoveDuplicates {
                     index--;
                 }
                 
-            }else if( index <chars.size()-1 && chars.get(index)==chars.get(index+1)){
+            }
+            if( index <chars.size()-1 && chars.get(index)==chars.get(index+1)){
                 chars.remove(index);
                 chars.remove(index);
                 if(index>0){

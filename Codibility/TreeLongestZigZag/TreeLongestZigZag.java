@@ -1,4 +1,4 @@
-package TreeLongestZigZag;
+package Codibility.TreeLongestZigZag;
 
 public class TreeLongestZigZag {
     public static void main(String args[]) {

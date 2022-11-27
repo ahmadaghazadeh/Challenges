@@ -12,7 +12,7 @@ public class RemoveDuplicates {
 
     public static String solution(String s) {
          // base case
-         if (s == null) {
+        if (s == null) {
             return null;
         }
          

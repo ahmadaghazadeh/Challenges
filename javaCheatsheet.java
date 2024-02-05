@@ -46,6 +46,10 @@ public class Test {
         newList.add(1);
         Integer[] newArray= newList.toArray(Integer[]::new);
 
+        for(int i=0; i<s.length();i++){  
+                char c = s.charAt(i);  
+                System.out.println("char at "+i+" index is: "+c);  
+        }   
 
         int number=1;
 
